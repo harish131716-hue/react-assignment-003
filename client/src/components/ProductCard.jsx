@@ -5,7 +5,7 @@ function ProductCard({
   price,
   quantity,
   selectedColor,
-  deliveryCity
+  deliveryCity,
 }) {
   useEffect(() => {
     const previousTitle = document.title;
@@ -20,21 +20,31 @@ function ProductCard({
 
   return (
     <div className="product-card">
-      <h2>Product Details</h2>
+      <div className="product-image">
+        <img
+          src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=300"
+          alt="Wireless Mouse"
+        />
+      </div>
 
-      <p>Product: {productName}</p>
-      <p>Price: ₹{price}</p>
-      <p>Colour: {selectedColor}</p>
-      <p>Deliver to: {deliveryCity}</p>
-      <p>Cart Quantity: {quantity}</p>
-      <p>Total Amount: ₹{quantity * price}</p>
+      <div className="product-details">
+        <h2>{productName}</h2>
+        <p className="price">₹{price} <small>per item</small></p>
 
-      <p>
-        Status:{" "}
-        {quantity === 0
-          ? "Cart is empty"
-          : "Product added to cart"}
-      </p>
+        <p>Colour: {selectedColor}</p>
+        <p>Deliver to: {deliveryCity}</p>
+
+        <hr />
+
+        <p>Cart Quantity: {quantity}</p>
+        <h3>Total Amount: ₹{quantity * price}</h3>
+
+        <p className="status">
+          {quantity === 0
+            ? "Cart is empty"
+            : "Product added to cart"}
+        </p>
+      </div>
     </div>
   );
 }

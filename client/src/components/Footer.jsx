@@ -1,9 +1,5 @@
 function Footer() {
-  return (
-    <footer>
-      <p>© 2026 Amazon Product Store</p>
-    </footer>
-  );
+  return <footer>© 2026 Amazon Product Store</footer>;
 }
 
 export default Footer;
