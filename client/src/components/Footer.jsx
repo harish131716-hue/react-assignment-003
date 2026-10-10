@@ -1,5 +1,10 @@
 function Footer() {
-  return <footer>© 2026 Amazon Product Store</footer>;
+  return (
+    <footer className="main-footer">
+      <p>© 2026 Amazon Product Store</p>
+      <span>Built with React • Learning through practice</span>
+    </footer>
+  );
 }
 
 export default Footer;
